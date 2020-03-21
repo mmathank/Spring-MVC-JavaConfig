@@ -8,10 +8,19 @@
 <title>User Form</title>
 </head>
 <body>
-	<form action="registerUser" method="GET">
+<%-- 	<form action="registerUser" method="GET">
 		Enter Your First Name: <input type="text" name="firstName"> <br>
-		Enter Your Last Name: <input type="text"  name="lastName"> <br>
+		Enter Your Last Name: <input type="text" name="lastName"> <br>
+		<input type="submit" />
+	</form> 
+	<br>
+	<hr>--%>
+	<h4>User Form with Model</h4>
+	<form action="registerUserModel" method="GET">
+		Enter Your First Name: <input type="text" name="firstName"> <br>
+		Enter Your Last Name: <input type="text" name="lastName"> <br>
 		<input type="submit" />
 	</form>
+
 </body>
 </html>
