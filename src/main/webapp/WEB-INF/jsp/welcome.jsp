@@ -8,10 +8,13 @@
 </head>
 <body>
 
-	<img width = 300 height = 200 src="<c:url value="/images/SpringMVC.png" />" /> 
+	<img width=300 height=200 src="<c:url value="/images/SpringMVC.png" />" />
 	<br>
 	<h3>
 		<a href="userForm"> Register User </a>
+	</h3>
+	<h3>
+		<a href="player/playerForm"> Register Player </a>
 	</h3>
 </body>
 </html>

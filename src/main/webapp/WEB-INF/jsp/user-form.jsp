@@ -15,7 +15,7 @@
 	<br>
 	<hr>--%>
 	<h4>User Form with Model</h4>
-	<form action="registerUserModel" method="GET">
+	<form action="registerUserModelTwo" method="GET">
 		Enter Your First Name: <input type="text" name="firstName"> <br>
 		Enter Your Last Name: <input type="text" name="lastName"> <br>
 		<input type="submit" />
