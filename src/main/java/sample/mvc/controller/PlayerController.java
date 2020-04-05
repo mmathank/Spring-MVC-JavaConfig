@@ -12,18 +12,18 @@ import sample.mvc.domain.Player;
 
 @Controller
 @RequestMapping("/player")
-@PropertySource(ignoreResourceNotFound = true, value = "classpath:gender.properties")
+@PropertySource(ignoreResourceNotFound = true, value = "classpath:state_en.properties")
 public class PlayerController {
 	
-	@Value("#{${genderOptions}}")
-	public Map<String, String> genderOptions;
+	@Value("#{${state.options}}")
+	public Map<String, String> stateOptions;
 	
 	@RequestMapping("/playerForm")
 	public String showPlayerForm(Model model) {
 		
 		Player player = new Player();
 		model.addAttribute("player", player);
-		model.addAttribute("genderOptions", genderOptions);
+		model.addAttribute("stateOptions", stateOptions);
 		return "player-form";
 	}
 	

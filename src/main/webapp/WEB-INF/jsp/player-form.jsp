@@ -1,11 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page isELIgnored="false"%>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Player Entry Form</title>
 </head>
 <body>
@@ -48,13 +45,29 @@
 			</form:select>
 			<br> <br>
 
-			<form:label path="gender">
-				<spring:message code="lable.gender" />
+			<form:label path="state">
+				<spring:message code="label.state" />
 			</form:label>
-			<form:select path="gender">
-				<form:options items="${genderOptions}" />
+			<form:select path="state">
+				<form:options items="${stateOptions}" />
 			</form:select>
-
+			<br> <br>	
+			
+			<form:label path="gender">
+				<spring:message code="label.gender" />
+			</form:label>
+			<form:radiobutton path="gender" value = "Male" label = "Male" />
+			<form:radiobutton path="gender" value = "Female" label = "Female" />
+			<br> <br>
+			
+			<form:label path="hobbies">
+				<spring:message code="label.hobbies" />
+			</form:label>
+			<form:checkbox path="hobbies" value = "Reading" label = "Reading" />
+			<form:checkbox path="hobbies" value = "Swimming" label = "Swimming" />
+			<form:checkbox path="hobbies" value = "Cycling" label = "Cycling" />
+			<br> <br>
+			
 			<input type="submit" value="Submit" />
 		</div>
 	</form:form>

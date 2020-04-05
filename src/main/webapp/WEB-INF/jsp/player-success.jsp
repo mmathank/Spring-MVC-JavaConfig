@@ -1,10 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page isELIgnored="false"%>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>User Success Page</title>
 </head>
 <body>
@@ -16,7 +13,15 @@
 		<br> <label> Player's Last Name: </label> ${player.lastName}
 		<br> <label> Player's Level: </label> ${player.level}
 		<br> <label> Player's Mother Tongue: </label> ${player.language}
+		<br> <label> Player's State: </label> ${player.state}
 		<br> <label> Player's Gender: </label> ${player.gender}
+		<br> <label> Player's Hobbies: </label> 
+			<ul>
+			<c:forEach var = "hobby" items = "${player.hobbies}" >
+			<li> ${hobby} </li>
+			</c:forEach>
+			</ul>
+		
 	</div>
 </body>
 </html>
