@@ -11,20 +11,51 @@
 <body>
 	<form:form action="processPlayerForm" modelAttribute="player">
 		<div align="center">
-			<img width=300 height=200
-				src="<c:url value="/images/SpringMVC.png" />" />
+			<img width=300 height=200 src="<c:url value="/images/SpringMVC.png" />" />
+			
 			<h4>Player Form</h4>
-			<a href="playerForm?lang=en">English</a> | <a href="playerForm?lang=fr">Française</a> <br> <br>
+			
+			<a href="playerForm?lang=en">English</a> | <a href="playerForm?lang=fr">Française</a> 
+			<br> <br>
+			
 			<form:label path="firstName">
 				<spring:message code="label.firstName" />
 			</form:label>
 			<form:input path="firstName" />
 			<br> <br>
+			
 			<form:label path="lastName">
 				<spring:message code="label.lastName" />
 			</form:label>
 			<form:input path="lastName" />
-			<br> <br> <input type="submit" value="Submit" />
+			<br> <br>
+			
+			<form:label path="level">
+				<spring:message code="label.level" />
+			</form:label>
+			<form:select path="level">
+				<form:option value="Jr" label="Junior" />
+				<form:option value="Sr" label="Senior" />
+				<form:option value="S.Sr" label="Super Senior" />
+			</form:select>
+			<br> <br> 
+			
+			<form:label path="language">
+				<spring:message code="label.mother.tongue" />
+			</form:label>
+			<form:select path="language">
+				<form:options items = "${player.langOptions}"/>
+			</form:select>
+			<br> <br>
+
+			<form:label path="gender">
+				<spring:message code="lable.gender" />
+			</form:label>
+			<form:select path="gender">
+				<form:options items="${genderOptions}" />
+			</form:select>
+
+			<input type="submit" value="Submit" />
 		</div>
 	</form:form>
 </body>

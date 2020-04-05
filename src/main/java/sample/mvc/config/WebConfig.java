@@ -43,7 +43,7 @@ public class WebConfig implements WebMvcConfigurer {
 		reloadMessage.setDefaultEncoding("UTF-8");
 		return reloadMessage;
 	}
-
+	
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
